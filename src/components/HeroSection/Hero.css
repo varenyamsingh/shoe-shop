@@ -1,0 +1,70 @@
+.hero {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 72px);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.hero h1 {
+  font-weight: 800;
+  line-height: 98px;
+  font-size: 92px;
+}
+
+.hero p {
+  font-weight: 600;
+  color: var(--gray);
+  max-width: 400px;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 40px;
+}
+
+.hero-btn button {
+  font-size: 24px;
+  border-radius: 15px;
+  height: auto;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--gray);
+  border: 1px solid gray;
+}
+
+.shopping p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.brand-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.brand-icons img{
+  cursor: pointer;
+}
+
+/* ----------------------- */
+.hero-image img {
+  animation: slideDown 3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px); /* Start Position */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* Normal Position */
+    opacity: 1;
+  }
+}
