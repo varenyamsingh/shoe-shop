@@ -6,10 +6,7 @@ const ProductCard = ({ shoe }) => {
   return (
     <div className="product-card">
       <img src={shoe.img} alt={shoe.name} />
-      <p
-        className="label"
-        style={{ color: shoe.label === "Bestseller" ? "orange" : "red" }}
-      >
+      <p className="label" style={{ color: shoe.label === "Bestseller" ? "orange" : "red" }}>
         {shoe.label}
       </p>
       <h3>{shoe.name}</h3>
