@@ -148,7 +148,6 @@ const ShoesList = () => {
       img: "/images/shoe18.jpeg",
     },
   ];
-
   return (
     <div className="shoes-list">
       {shoes.map((shoe) => (
@@ -157,5 +156,4 @@ const ShoesList = () => {
     </div>
   );
 };
-
 export default ShoesList;
