@@ -1,19 +1,36 @@
 import "./App.css";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/HeroSection/Hero";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import NavBar from "./components/NavBar/NavBar";
-import ProductCard from "./components/Products/ProductCard";
+import Hero from "./components/HeroSection/Hero";
 import ShoesList from "./components/ShoesList/ShoesList";
+import Footer from "./components/Footer/Footer";
+import AddToCart from "./components/AddToCart/AddToCart";
+
+import { CartProvider } from "./context/CartContext";
 
 const App = () => {
   return (
-    <div>
-      <NavBar/>
-      <Hero />
-      <ProductCard/>
-      <ShoesList/>
-      <Footer/>
-    </div>
+    <CartProvider>
+      <Router>
+        <NavBar />
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <ShoesList />
+              </>
+            }
+          />
+          <Route path="/cart" element={<AddToCart />} />
+        </Routes>
+
+        <Footer />
+      </Router>
+    </CartProvider>
   );
 };
 

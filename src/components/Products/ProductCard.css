@@ -12,7 +12,7 @@
 .product-card:hover {
   transform: translateY(-6px);
   cursor: pointer;
-  box-shadow: 1px 1px 10px rgba(84, 3, 3, 0.4);
+  box-shadow: 1px 1px 10px rgba(66, 1, 1, 0.4);
 }
 
 .product-card img {
@@ -42,4 +42,9 @@
 .product-card p:last-child {
   font-weight: bold;
   margin-top: 8px;
+}
+
+.product-card button{
+  margin: 8px 15px;
+  
 }

@@ -1,5 +1,6 @@
-import "./NavBar.css"
+import "./NavBar.css";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -8,15 +9,12 @@ const NavBar = () => {
         <img src="/images/brand_logo.png" alt="brand-logo" />
       </div>
       <ul>
-        <li href="#">Menu</li>
-        <li href="#">Home</li>
-        <li href="#">About</li>
-        <li href="#">Contact</li>
-        <li href='#'>Cart</li>
-        {/* <MdOutlineAddShoppingCart/> */}
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/cart"><MdOutlineAddShoppingCart /> Cart</Link></li>
       </ul>
-
-      <button>login</button>
+      <button>Login</button>
     </nav>
   );
 };
